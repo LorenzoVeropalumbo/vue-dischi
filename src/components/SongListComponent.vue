@@ -39,7 +39,7 @@
         })
         .catch((err) =>{
           // has failed
-          console.log(err);    
+          alert(err)    
         })
 
         this.isLoad = true;
