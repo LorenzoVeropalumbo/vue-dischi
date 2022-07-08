@@ -3,42 +3,22 @@
     <HeaderSpotify />
 
     <main>
-     {{songArr}} 
+     <SongListComponent/> 
     </main>
         
   </div>
 </template>
 
 <script>
-  import axios from "axios";
   import HeaderSpotify from "@/components/HeaderSpotify.vue"
+  import SongListComponent from "@/components/SongListComponent.vue"
 
   export default {
     name: 'App',
     components: {
       HeaderSpotify,
+      SongListComponent,
     },
-    data(){
-      return{
-        apiUrl: "https://flynn.boolean.careers/exercises/api/array/music",
-        songArr: [],
-      }
-    },
-    mounted(){
-      this.GetApiSongList();
-    },
-    methods:{
-      GetApiSongList(){
-        axios.get(this.apiUrl).then(response => {
-          console.log(response)
-          this.songArr = response.data.response  
-        })
-        .catch((err) =>{
-          // has failed
-          console.log(err)     
-        })
-      }
-    }
   }
 </script>
 
