@@ -1,7 +1,7 @@
 <template>
   <div class="card-content gx-5">
     <img :src="singleSong.poster" :alt="singleSong.title"
-    onerror="this.src = 'https://www.inventoridigiochi.it/wp-content/uploads/2020/08/Cattura-1-700x497.png';">
+    onerror="this.src = 'https://www.frosinonecalcio.com/wp-content/uploads/2021/09/default-placeholder.png'">
     <span class="text-tile">{{singleSong.title}}</span>           
       <div class="cont-subtitle">
         <span class="subtitle">{{singleSong.author}}</span>
@@ -39,7 +39,7 @@ export default {
       font-weight: 900;
       text-transform: uppercase;
       line-height: 1.1;
-       font-size: 22px;
+      font-size: 22px;
     }
 
     .cont-subtitle{
