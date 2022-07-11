@@ -25,10 +25,12 @@
 <style lang="scss">
   @import "./style/common";
   @import "@/style/variables.scss";
-  main{
-    height: calc(100vh - 60px);
+  
+  #app{
+    height: 100vh;
     width: 100%;
     background-color: $main-bg-color;
+    overflow: hidden;
   }
 
 </style>
