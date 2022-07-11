@@ -1,10 +1,6 @@
 <template>
   <section>
-    <SearchBarComponent 
-    @selectGenere="searchGenere" 
-    @selectCantante="searchAuthor"  
-    :Albumobj="filterSongList"/>
-
+    <SearchBarComponent @selectGenere="searchGenere" @selectCantante="searchAuthor"  :Albumobj="songArr"/>
     <div class="container">
       <div v-if="isLoad" class="row row-cols-5">
         <div  class="col gy-3" v-for="song,index in filterSongList" :key="index">
@@ -51,9 +47,9 @@
           });
         } else {
           return this.songArr.filter(word => {
-            return word.author.includes(this.valueAuthor) && word.genre.includes(this.valueGenre)       
+            return word.genre.includes(this.valueGenre) && word.author.includes(this.valueAuthor)       
           });
-        }      
+        }       
       },
     },
     mounted(){
@@ -76,9 +72,8 @@
         console.log(world)
         this.valueGenre = world;
       },
-      searchAuthor(worlds){
-        this.valueAuthor = worlds;
-        console.log(worlds)
+      searchAuthor(world){
+        this.valueAuthor = world;
       }
     }
   }

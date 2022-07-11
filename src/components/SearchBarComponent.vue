@@ -2,8 +2,7 @@
   <div class="container">
     <select 
       id="stand" 
-      @change="switchSelectGen($event)" 
-      value="0"
+      @change="switchSelectGen($event)"       
     >
       <option value="All">All</option>
       <option value="Metal">Metal</option>
