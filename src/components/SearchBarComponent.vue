@@ -15,10 +15,10 @@
     <select 
       id="stand" 
       @change="switchSelectArt($event)" 
-      value="0"
     >
-      <option value="All">All</option>
+      
       <option v-for="song,index in Albumobj" :key="index" :value="song.author">{{song.author}}</option>
+      <option value="All">All</option>
     </select>
   </div>
 </template>
@@ -26,8 +26,9 @@
 <script>
   export default {
     name: 'SearchBarComponent',
-     props:{
-      Albumobj: Object,
+    
+    props:{
+      Albumobj: Array,
     },
     methods: {
       switchSelectGen(select){       

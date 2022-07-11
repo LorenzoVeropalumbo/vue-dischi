@@ -1,7 +1,7 @@
 <template>
   <div class="card-content gx-5">
     <img :src="singleSong.poster" :alt="singleSong.title"
-    onerror="this.src = 'https://www.frosinonecalcio.com/wp-content/uploads/2021/09/default-placeholder.png'">
+    @error="this.src = 'https://www.frosinonecalcio.com/wp-content/uploads/2021/09/default-placeholder.png'">
     <span class="text-tile">{{singleSong.title}}</span>           
       <div class="cont-subtitle">
         <span class="subtitle">{{singleSong.author}}</span>
