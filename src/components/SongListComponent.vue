@@ -1,6 +1,10 @@
 <template>
   <section>
-    <SearchBarComponent @selectGenere="searchGenere" @selectCantante="searchAuthor"  :Albumobj="filterSongList"/>
+    <SearchBarComponent 
+    @selectGenere="searchGenere" 
+    @selectCantante="searchAuthor"  
+    :Albumobj="filterSongList"/>
+    
     <div class="container">
       <div v-if="isLoad" class="row row-cols-5">
         <div  class="col gy-3" v-for="song,index in filterSongList" :key="index">
